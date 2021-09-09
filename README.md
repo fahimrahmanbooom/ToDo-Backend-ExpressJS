@@ -1,127 +1,127 @@
-<p><br></p>
-<p>#TODO RestAPI Documentation</p>
-<p><br></p>
-<p>Developed By: Fahim Rahman</p>
-<p>V1 Completion Date: 2 Aug 2021</p>
-<p>V1 Last Update Date: 7 Aug 2021</p>
-<p>Further Development: Yes</p>
-<p>Technologies: NodeJS, ExpressJS, MongoDB, Cloudinary</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>!! SERVER SIDE USE ONLY !!</p>
-<p><br></p>
-<p>CHANGE PORT and IP: app.listen(&quot;Port&quot;, &quot;Server IP&quot;)</p>
-<p>INSTALL DEPENDENCIES: npm install</p>
-<p>RUN SERVER: npm start</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>Live Server Base URL: https://todoexpressjs.herokuapp.com/</p>
-<p><br></p>
-<p>Restful APIs:</p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>Register:</p>
-<p><br></p>
-<p>Request -&gt; JSON BODY</p>
-<p>API (POST): {baseURL}/api/v1/register</p>
-<p>JSON BODY: { &quot;email&quot;: string, &quot;password&quot;: string, &quot;confirmPassword&quot;: string }</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>Login:</p>
-<p><br></p>
-<p>Request -&gt; JSON BODY</p>
-<p>API (POST): {baseURL}/api/v1/login</p>
-<p>JSON BODY: { &quot;email&quot;: string, &quot;password&quot;: string }</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>Send OTP:</p>
-<p><br></p>
-<p>Request -&gt; JSON BODY</p>
-<p>API (POST): {baseURL}/api/v1/sendOTP</p>
-<p>JSON BODY: { &quot;email&quot;: string }</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>Forgot Password:</p>
-<p><br></p>
-<p>Request -&gt; JSON BODY</p>
-<p>API (POST): {baseURL}/api/v1/forgotPassword</p>
-<p>JSON BODY: { &quot;email&quot;: string, &quot;otp&quot;: string, &quot;newPassword&quot; : string, &quot;newConfirmPassword&quot;: string }</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>Refresh Token:</p>
-<p><br></p>
-<p>Request -&gt; JSON BODY</p>
-<p>API (POST): {baseURL}/api/v1/refreshToken</p>
-<p>JSON BODY: { &quot;email&quot;: string, &quot;refreshToken&quot;: string }</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>Logout:</p>
-<p><br></p>
-<p>Request -&gt; JSON BODY</p>
-<p>API (POST): {baseURL}/api/v1/logout</p>
-<p>JSON BODY: { &quot;email&quot;: string, &quot;refreshToken&quot;: string }</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>TODO POST:&nbsp;</p>
-<p><br></p>
-<p>Request -&gt; Multi-Part FORM-DATA</p>
-<p>API (POST): {baseURL}/api/v1/todo</p>
-<p>BODY: image: file (optional), text: string</p>
-<p>HEADER: Authorization: Bearer {token}</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>TODO GET All:</p>
-<p><br></p>
-<p>Response -&gt; JSON BODY</p>
-<p>API (GET): {baseURL}/api/v1/todo</p>
-<p>HEADER: Authorization: Bearer {token}&nbsp;</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>TODO GET Single:&nbsp;</p>
-<p><br></p>
-<p>Response -&gt; JSON BODY</p>
-<p>API (GET): {baseURL}/api/v1/todo/{todoID}</p>
-<p>HEADER: Authorization: Bearer {token}</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>TODO PATCH Single:&nbsp;</p>
-<p><br></p>
-<p>Request -&gt; JSON BODY</p>
-<p>API (PATCH): {baseURL}/api/v1/todo/{todoID}</p>
-<p>JSON BODY: { &quot;text&quot;: string, &quot;isCompleted&quot;: bool }</p>
-<p>HEADER: Authorization: Bearer {token}</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>DELETE Single:&nbsp;</p>
-<p><br></p>
-<p>Request -&gt; Nil</p>
-<p>API (DELETE): {baseURL}/api/v1/todo/{todoID}</p>
-<p>HEADER: Authorization: Bearer {token}</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p>DELETE All:&nbsp;</p>
-<p><br></p>
-<p>Request -&gt; Nil</p>
-<p>API (DELETE): {baseURL}/api/v1/todo</p>
-<p>HEADER: Authorization: Bearer {token}&nbsp;</p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p><br></p>
-<p><br></p>
-<p>---------------------------------------------------------</p>
-<p>---------------------------------------------------------</p>
+
+#TODO RestAPI Documentation
+
+Developed By: Fahim Rahman<br>
+V1 Completion Date: 2 Aug 2021<br>
+V1 Last Update Date: 7 Aug 2021<br>
+Further Development: Yes<br>
+Technologies: NodeJS, ExpressJS, MongoDB, Cloudinary
+
+---------------------------------------------------------
+---------------------------------------------------------
+
+!! SERVER SIDE USE ONLY !!
+
+CHANGE PORT and IP: app.listen("Port", "Server IP")<br>
+INSTALL DEPENDENCIES: npm install<br>
+RUN SERVER: npm start
+
+---------------------------------------------------------
+---------------------------------------------------------
+
+Live Server Base URL: https://todoexpressjs.herokuapp.com/
+
+Restful APIs:
+---------------------------------------------------------
+
+Register:
+
+Request -> JSON BODY<br>
+API (POST): {baseURL}/api/v1/register<br>
+JSON BODY: { "email": string, "password": string, "confirmPassword": string }
+
+---------------------------------------------------------
+
+Login:
+
+Request -> JSON BODY<br>
+API (POST): {baseURL}/api/v1/login<br>
+JSON BODY: { "email": string, "password": string }
+
+---------------------------------------------------------
+
+Send OTP:
+
+Request -> JSON BODY
+API (POST): {baseURL}/api/v1/sendOTP
+JSON BODY: { "email": string }
+
+---------------------------------------------------------
+
+Forgot Password:
+
+Request -> JSON BODY
+API (POST): {baseURL}/api/v1/forgotPassword
+JSON BODY: { "email": string, "otp": string, "newPassword" : string, "newConfirmPassword": string }
+
+---------------------------------------------------------
+
+Refresh Token:
+
+Request -> JSON BODY
+API (POST): {baseURL}/api/v1/refreshToken
+JSON BODY: { "email": string, "refreshToken": string }
+
+---------------------------------------------------------
+
+Logout:
+
+Request -> JSON BODY
+API (POST): {baseURL}/api/v1/logout
+JSON BODY: { "email": string, "refreshToken": string }
+
+---------------------------------------------------------
+
+TODO POST: 
+
+Request -> Multi-Part FORM-DATA
+API (POST): {baseURL}/api/v1/todo
+BODY: image: file (optional), text: string
+HEADER: Authorization: Bearer {token}
+
+---------------------------------------------------------
+
+TODO GET All:
+
+Response -> JSON BODY
+API (GET): {baseURL}/api/v1/todo
+HEADER: Authorization: Bearer {token} 
+
+---------------------------------------------------------
+
+TODO GET Single: 
+
+Response -> JSON BODY
+API (GET): {baseURL}/api/v1/todo/{todoID}
+HEADER: Authorization: Bearer {token}
+
+---------------------------------------------------------
+
+TODO PATCH Single: 
+
+Request -> JSON BODY
+API (PATCH): {baseURL}/api/v1/todo/{todoID}
+JSON BODY: { "text": string, "isCompleted": bool }
+HEADER: Authorization: Bearer {token}
+
+---------------------------------------------------------
+
+DELETE Single: 
+
+Request -> Nil
+API (DELETE): {baseURL}/api/v1/todo/{todoID}
+HEADER: Authorization: Bearer {token}
+
+---------------------------------------------------------
+
+DELETE All: 
+
+Request -> Nil
+API (DELETE): {baseURL}/api/v1/todo
+HEADER: Authorization: Bearer {token} 
+
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+---------------------------------------------------------
