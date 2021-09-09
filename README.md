@@ -1,5 +1,4 @@
-
-#TODO RestAPI Documentation
+##TODO RestAPI Documentation
 
 Developed By: Fahim Rahman<br>
 V1 Completion Date: 2 Aug 2021<br>
@@ -42,82 +41,82 @@ JSON BODY: { "email": string, "password": string }
 
 Send OTP:
 
-Request -> JSON BODY
-API (POST): {baseURL}/api/v1/sendOTP
+Request -> JSON BODY<br>
+API (POST): {baseURL}/api/v1/sendOTP<br>
 JSON BODY: { "email": string }
 
 ---------------------------------------------------------
 
 Forgot Password:
 
-Request -> JSON BODY
-API (POST): {baseURL}/api/v1/forgotPassword
+Request -> JSON BODY<br>
+API (POST): {baseURL}/api/v1/forgotPassword<br>
 JSON BODY: { "email": string, "otp": string, "newPassword" : string, "newConfirmPassword": string }
 
 ---------------------------------------------------------
 
 Refresh Token:
 
-Request -> JSON BODY
-API (POST): {baseURL}/api/v1/refreshToken
+Request -> JSON BODY<br>
+API (POST): {baseURL}/api/v1/refreshToken<br>
 JSON BODY: { "email": string, "refreshToken": string }
 
 ---------------------------------------------------------
 
 Logout:
 
-Request -> JSON BODY
-API (POST): {baseURL}/api/v1/logout
+Request -> JSON BODY<br>
+API (POST): {baseURL}/api/v1/logout<br>
 JSON BODY: { "email": string, "refreshToken": string }
 
 ---------------------------------------------------------
 
 TODO POST: 
 
-Request -> Multi-Part FORM-DATA
-API (POST): {baseURL}/api/v1/todo
-BODY: image: file (optional), text: string
+Request -> Multi-Part FORM-DATA<br>
+API (POST): {baseURL}/api/v1/todo<br>
+BODY: image: file (optional), text: string<br>
 HEADER: Authorization: Bearer {token}
 
 ---------------------------------------------------------
 
 TODO GET All:
 
-Response -> JSON BODY
-API (GET): {baseURL}/api/v1/todo
+Response -> JSON BODY<br>
+API (GET): {baseURL}/api/v1/todo<br>
 HEADER: Authorization: Bearer {token} 
 
 ---------------------------------------------------------
 
 TODO GET Single: 
 
-Response -> JSON BODY
-API (GET): {baseURL}/api/v1/todo/{todoID}
+Response -> JSON BODY<br>
+API (GET): {baseURL}/api/v1/todo/{todoID}<br>
 HEADER: Authorization: Bearer {token}
 
 ---------------------------------------------------------
 
 TODO PATCH Single: 
 
-Request -> JSON BODY
-API (PATCH): {baseURL}/api/v1/todo/{todoID}
-JSON BODY: { "text": string, "isCompleted": bool }
+Request -> JSON BODY<br>
+API (PATCH): {baseURL}/api/v1/todo/{todoID}<br>
+JSON BODY: { "text": string, "isCompleted": bool }<br>
 HEADER: Authorization: Bearer {token}
 
 ---------------------------------------------------------
 
 DELETE Single: 
 
-Request -> Nil
-API (DELETE): {baseURL}/api/v1/todo/{todoID}
+Request -> Nil<br>
+API (DELETE): {baseURL}/api/v1/todo/{todoID}<br>
 HEADER: Authorization: Bearer {token}
 
 ---------------------------------------------------------
 
 DELETE All: 
 
-Request -> Nil
-API (DELETE): {baseURL}/api/v1/todo
+Request -> Nil<br>
+API (DELETE): {baseURL}/api/v1/todo<br>
 HEADER: Authorization: Bearer {token} 
 
 ---------------------------------------------------------
